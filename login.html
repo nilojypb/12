@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Login</h1>
+  </header>
+
+  <form id="formLogin">
+    <label for="login">E-mail ou Nome de Usuário:</label>
+    <input type="text" id="login" name="login" required>
+
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" required>
+
+    <button type="submit">Entrar</button>
+  </form>
+
+  <script>
+    document.getElementById('formLogin').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Login realizado com sucesso!");
+      window.location.href = 'videos.html';  // Redireciona para a tela de vídeos
+    });
+  </script>
+
+</body>
+</html>
 
