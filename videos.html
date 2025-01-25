@@ -11,6 +11,7 @@
   <header>
     <h1>Vídeos</h1>
     <p>Saldo de Moedas: <span id="moedas">0</span></p>
+    <p>Status: <span id="status">Usuário Normal</span></p>
   </header>
 
   <div class="videos">
@@ -30,10 +31,17 @@
     function assistirVideo() {
       moedas += 10;
       document.getElementById('moedas').innerText = moedas;
+
+      // Atualizar o status de gamificação
+      if (moedas >= 100) {
+        document.getElementById('status').innerText = "Usuário VIP";
+      } else {
+        document.getElementById('status').innerText = "Usuário Normal";
+      }
+
       alert("Você assistiu ao vídeo e ganhou 10 moedas!");
     }
   </script>
 
 </body>
 </html>
-
