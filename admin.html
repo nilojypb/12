@@ -13,15 +13,43 @@
   </header>
 
   <div class="admin-options">
-    <button>Visualizar Usuários</button>
-    <button>Alterar Valor das Moedas</button>
-    <button>Excluir Links</button>
+    <button onclick="visualizarUsuarios()">Visualizar Usuários</button>
+    <button onclick="alterarValorMoeda()">Alterar Valor das Moedas</button>
+    <button onclick="excluirLinks()">Excluir Links</button>
+  </div>
+
+  <div id="confirmation" style="display:none;">
+    <p>Tem certeza que deseja excluir este link?</p>
+    <button onclick="confirmarExcluir()">Confirmar</button>
+    <button onclick="cancelarExcluir()">Cancelar</button>
   </div>
 
   <script>
-    // Aqui seria possível adicionar lógicas para interagir com o backend
+    function visualizarUsuarios() {
+      alert("Exibindo lista de usuários...");
+      // Aqui você pode buscar dados do backend
+    }
+
+    function alterarValorMoeda() {
+      let novoValor = prompt("Digite o novo valor das moedas:");
+      if (novoValor) {
+        alert("Valor das moedas alterado para " + novoValor);
+      }
+    }
+
+    function excluirLinks() {
+      document.getElementById('confirmation').style.display = 'block';
+    }
+
+    function confirmarExcluir() {
+      alert("Link excluído com sucesso!");
+      document.getElementById('confirmation').style.display = 'none';
+    }
+
+    function cancelarExcluir() {
+      document.getElementById('confirmation').style.display = 'none';
+    }
   </script>
 
 </body>
 </html>
-
