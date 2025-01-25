@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vídeos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Vídeos</h1>
+    <p>Saldo de Moedas: <span id="moedas">0</span></p>
+  </header>
+
+  <div class="videos">
+    <div class="video-card">
+      <h3>Vídeo 1</h3>
+      <button onclick="assistirVideo()">Assistir</button>
+    </div>
+    <div class="video-card">
+      <h3>Vídeo 2</h3>
+      <button onclick="assistirVideo()">Assistir</button>
+    </div>
+  </div>
+
+  <script>
+    let moedas = 0;
+
+    function assistirVideo() {
+      moedas += 10;
+      document.getElementById('moedas').innerText = moedas;
+      alert("Você assistiu ao vídeo e ganhou 10 moedas!");
+    }
+  </script>
+
+</body>
+</html>
 
