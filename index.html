@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Página Inicial</h1>
+    <p>Siga dois perfis para começar.</p>
+  </header>
+
+  <div class="profiles">
+    <div class="profile-card">
+      <img src="profile1.jpg" alt="Perfil 1">
+      <h3>Perfil 1</h3>
+      <button onclick="seguirPerfil(1)">Já segui</button>
+    </div>
+    <div class="profile-card">
+      <img src="profile2.jpg" alt="Perfil 2">
+      <h3>Perfil 2</h3>
+      <button onclick="seguirPerfil(2)">Já segui</button>
+    </div>
+  </div>
+
+  <script>
+    function seguirPerfil(perfilId) {
+      alert("Você seguiu o perfil " + perfilId);
+      // Aqui pode ser colocada a lógica de adicionar ao backend
+    }
+  </script>
+</body>
+</html>
 
